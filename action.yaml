@@ -4,7 +4,7 @@ inputs:
   path:
     description: 'Path to the shell script (supports glob)'
     required: true
-    default: 'scripts/*.sh'
+    default: '*/*.sh'
   args:
     description: 'Arguments to pass to the shellcheck command'
     required: false
