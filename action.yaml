@@ -1,0 +1,21 @@
+name: Shell Check
+description: 'Shell Check'
+inputs:
+  path:
+    description: 'Path to the shell script (supports glob)'
+    required: true
+    default: 'scripts/*.sh'
+  args:
+    description: 'Arguments to pass to the shellcheck command'
+    required: false
+    default: '--external-sources'
+outputs: { }
+runs:
+  using: composite
+  steps:
+    - name: Shell Check
+      shell: bash
+      run: |
+        CMD="shellcheck ${{ inputs.path }} ${{ inputs.args }}"
+        echo "Running: $CMD"
+        eval $CMD
