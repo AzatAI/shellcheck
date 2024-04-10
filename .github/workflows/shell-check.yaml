@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shell Check AzatAI
-        uses: AzatAI/shellcheck@v0.1.0-alpha
+        uses: AzatAI/shellcheck@main
