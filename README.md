@@ -1,0 +1,2 @@
+# shellcheck
+Shell check action
