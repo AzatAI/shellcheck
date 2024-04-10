@@ -1,0 +1,16 @@
+# Runs the shell check command
+name: Shell Check
+on:
+  push:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  shell_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Shell Check AzatAI
+        uses: AzatAI/shellcheck@v0.1.0-alpha
