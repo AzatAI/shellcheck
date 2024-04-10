@@ -19,3 +19,7 @@ runs:
         CMD="shellcheck ${{ inputs.path }} ${{ inputs.args }}"
         echo "Running: $CMD"
         eval $CMD
+
+branding:
+  icon: trending-up
+  color: blue
